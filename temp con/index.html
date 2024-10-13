@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+</head>
+<body>
+   <div class="converter">
+        <h2>Temperature Converter</h2>
+<label for="fromUnit">From:</label>
+<select  id="fromUnit" >
+    <option value="C">Celcious</option>
+    <option value="F">Fahrenheit</option>
+    <option value="K">Kelvin</option>
+    <option value="R"></option>
+</select>
+<label for="toUnit">To:</label>
+<select  id="toUnit">
+    <option value="C">Celcious</option>
+    <option value="F">Fahrenheit</option>
+    <option value="K">Kelvin</option>
+    <option value="R"></option>
+
+</select>
+<label for="Temperature">Temperature:</label>
+<input type="number" id="Temperature" placeholder="Enter Temperature">
+<button onclick="convert()">convert</button>
+
+<label for="result">Result:</label>
+<input type="text" id="result" readonly>
+</div>
+
+<script>
+    function convert(){
+        var fromUnit=document.getElementById('fromUnit').value;
+        var toUnit=document.getElementById('toUnit').value;
+        var Temperature=parseFloat(document.getElementById('temperature').value)
+
+        var converttedvalue;
+        var resultUnit;
+
+        switch(fromUnit){
+            case 'C':
+                if(toUnit==='F'){
+                    converttedvalue=(Temperature*9/5)
+                }
+        }
+    }
+</script>
+</body>
+</html>
